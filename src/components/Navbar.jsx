@@ -26,7 +26,7 @@ const Navbar = async () => {
                     <LogoutLink className="btn  font-semibold  bg-gray-700 text-white p-3 rounded-md">Logout</LogoutLink>
                 ) : (
                     <div >
-                        <LoginLink className="btn  font-semibold  bg-gray-700 text-white p-3 rounded-md">Sign in</LoginLink>
+                        <LoginLink className="btn  font-semibold  bg-gray-700 text-white p-3 rounded-md">Signin</LoginLink>
                     </div>
                 )}
             </nav>
