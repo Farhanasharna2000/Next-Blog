@@ -2,6 +2,7 @@ import Link from "next/link";
 import { LoginLink, LogoutLink } from "@kinde-oss/kinde-auth-nextjs/components";
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 
+
 const Navbar = async () => {
     const { getUser } = getKindeServerSession();
     const user = await getUser();
@@ -11,21 +12,21 @@ const Navbar = async () => {
         <div className="shadow-md">
             <nav className="container mx-auto flex justify-between items-center py-5">
                 <div>
-                    <h2>logo</h2>
+               <h2 className="font-serif md:text-2xl font-extrabold">My Blog</h2>
                 </div>
-                <div className="flex gap-6">
-                    <Link href={'/'}>Home</Link>
+                <div className="flex gap-3">
+                    <Link className="btn border border-gray-400 px-2 py-1 rounded-md" href={'/'}>Home</Link>
                     {user ? (
-                        <Link href={'/profile'}>Profile</Link> // Go to profile if user is authenticated
+                        <Link className="btn border border-gray-400 px-2 py-1 rounded-md" href={'/profile'}>Profile</Link> 
                     ) : (
-                        <LoginLink className="btn">Profile</LoginLink> // Trigger Kinde login flow if not authenticated
+                        <LoginLink className="btn border border-gray-400 px-2 py-1 rounded-md">Profile</LoginLink> 
                     )}
                 </div>
                 {user ? (
-                    <LogoutLink className="btn border border-gray-400 p-2 rounded-md">Logout</LogoutLink>
+                    <LogoutLink className="btn  font-semibold  bg-gray-700 text-white p-3 rounded-md">Logout</LogoutLink>
                 ) : (
-                    <div className="flex gap-6">
-                        <LoginLink className="btn border border-gray-400 p-2 rounded-md">Sign in</LoginLink>
+                    <div >
+                        <LoginLink className="btn  font-semibold  bg-gray-700 text-white p-3 rounded-md">Sign in</LoginLink>
                     </div>
                 )}
             </nav>
