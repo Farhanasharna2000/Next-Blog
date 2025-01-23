@@ -23,10 +23,10 @@ const Navbar = async () => {
                     )}
                 </div>
                 {user ? (
-                    <LogoutLink className="btn  font-semibold  bg-gray-700 text-white p-3 rounded-md">Logout</LogoutLink>
+                    <LogoutLink className="btn    bg-gray-700 text-white p-3 rounded-md">Logout</LogoutLink>
                 ) : (
                     <div >
-                        <LoginLink className="btn  font-semibold  bg-gray-700 text-white p-3 rounded-md">Signin</LoginLink>
+                        <LoginLink className="btn   bg-gray-700 text-white p-3 rounded-md">Signin</LoginLink>
                     </div>
                 )}
             </nav>
