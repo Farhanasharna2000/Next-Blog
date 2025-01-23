@@ -12,9 +12,9 @@ const Navbar = async () => {
         <div className="shadow-md">
             <nav className="container mx-auto flex justify-between items-center py-5">
                 <div>
-               <h2 className="font-serif md:text-2xl font-extrabold">My Blog</h2>
+               <h2 className="font-serif md:text-2xl ml-4 md:ml-0 font-extrabold">My Blog</h2>
                 </div>
-                <div className="flex gap-3">
+                <div className="flex gap-1 md:gap-3">
                     <Link className="btn border border-gray-400 px-2 py-1 rounded-md" href={'/'}>Home</Link>
                     {user ? (
                         <Link className="btn border border-gray-400 px-2 py-1 rounded-md" href={'/profile'}>Profile</Link> 
@@ -23,10 +23,10 @@ const Navbar = async () => {
                     )}
                 </div>
                 {user ? (
-                    <LogoutLink className="btn    bg-gray-700 text-white p-2 rounded-md">Logout</LogoutLink>
+                    <LogoutLink className="btn    bg-gray-700 text-white p-2 rounded-md mr-4 md:mr-0">Logout</LogoutLink>
                 ) : (
                     <div >
-                        <LoginLink className="btn   bg-gray-700 text-white p-2 rounded-md">Signin</LoginLink>
+                        <LoginLink className="btn   bg-gray-700 text-white p-2 rounded-md mr-4 md:mr-0">Login</LoginLink>
                     </div>
                 )}
             </nav>
