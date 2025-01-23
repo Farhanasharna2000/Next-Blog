@@ -11,7 +11,7 @@ const Navbar = async () => {
         <div className="shadow-md">
             <nav className="container mx-auto flex justify-between items-center py-5">
                 <div>
-                    <h2>logo</h2>
+                    <h1>logo</h1>
                 </div>
                 <div className="flex gap-6">
                     <Link href={'/'}>Home</Link>
