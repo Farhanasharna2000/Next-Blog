@@ -6,7 +6,6 @@ const Navbar = async () => {
     const { getUser } = getKindeServerSession();
     const user = await getUser();
 
-    console.log(user);
 
     return (
         <div className="shadow-md">
